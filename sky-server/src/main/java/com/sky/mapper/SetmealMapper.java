@@ -36,6 +36,14 @@ public interface SetmealMapper {
     List<Setmeal> list(Setmeal setmeal);
 
     /**
+     * 根据id查询套餐
+     * @param id
+     * @return
+     */
+    @Select("select * from setmeal where id = #{id}")
+    Setmeal getById(Long id);
+
+    /**
      * 根据套餐id查询菜品选项
      * @param setmealId
      * @return
